@@ -1,13 +1,14 @@
 // src/components/Product.jsx
 
-export const Product = ({
-  name,
-  imgUrl = "https://dummyimage.com/640x480/2a2a2a/ffffff&text=Product+image+placeholder",
-  price,
-}) => (
-  <div>
-    <h2>{name}</h2>
-    <img src={imgUrl} alt={name} width="480" />
-    <p>Price: {price} credits</p>
-  </div>
-);
+export const Product = ({ username, messages }) => {
+  return (
+    <div>
+      <p>Hello {username}</p>
+      <p>
+        {messages.length > 0
+          ? `You have ${messages.length} unread messages`
+          : "No unread messages"}
+      </p>
+    </div>
+  );
+};
